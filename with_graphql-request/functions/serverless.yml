@@ -1,0 +1,44 @@
+service: functions
+frameworkVersion: '3'
+
+useDotenv: true
+
+provider:
+  name: aws
+  runtime: nodejs18.x
+  environment:
+    SLACK_SIGNING_SECRET: ${env:SLACK_SIGNING_SECRET}
+    SLACK_BOT_TOKEN: ${env:SLACK_BOT_TOKEN}
+
+functions:
+  addingUser:
+    handler: src/handlers/users/addUsers-channel/UsersInchannels/addUserThroughChannel.handler
+    events:
+      - httpApi:
+          path: slack/addUser
+          method: post
+
+  addingUserChannel:
+    handler: src/handlers/users/addUsers-channel/addNewUsers-channels/new_member_added_channel.handler
+    events:
+      - httpApi:
+          path: slack/addUserChannel
+          method: post
+
+  removingUserChannel:
+    handler: src/handlers/users/removedUser-channel/removedUser-channel.handler
+    events:
+      - httpApi:
+          path: slack/removeUserChannel
+          method: post
+
+  add_allUsers:
+    handler: src/handlers/users/adding-allUsers/adding-allUsers.handler
+    events:
+      - httpApi:
+          path: slack/adding_allUsers
+          method: post
+
+plugins:
+  - serverless-offline
+  - serverless-dotenv-plugin

@@ -1,0 +1,16 @@
+# package directories
+node_modules
+jspm_packages
+../db_data
+# Serverless directories
+.serverless
+# Yarn directories
+./../.yarn
+# Balel config
+./../.babelrc
+# yarn lock
+./../yarn.lock
+#.Idea directories
+../.idea
+# Coverage directories
+../coverage

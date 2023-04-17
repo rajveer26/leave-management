@@ -1,4 +1,8 @@
-import { successMessage } from "../functions/successMessage.js";
+import { successMessage } from "../../../utils/helper.js";
+
+jest.mock("../../../libs/graphConnector.js", () => ({
+  getGraphClient: jest.fn(),
+}));
 describe("successMessage", () => {
   const mockClient = {
     chat: {

@@ -1,19 +1,27 @@
-import { toGetDomain } from "../functions/toGetDomain.js";
-import { clients } from '../../../utils/connection.js';
-import { gql } from '@apollo/client';
-jest.mock('../../../utils/connection.js')
+import { toGetDomain } from "../../../utils/helper.js";
+import { getGraphClient } from '../../../libs/graphConnector.js';
+import { TO_GET_DOMAIN } from '../../../queries/config.js';
+import { gql } from "graphql-tag";
 
-import { TO_GET_DOMAIN} from "../../../queries/config.js";
+jest.mock('../../../utils/helper.js',()=>({
+  toGetDomain:jest.requireActual("../../../utils/helper.js").toGetDomain
+}))
 
-
-describe("toGetChannel function", () => {
+jest.mock("../../../libs/graphConnector.js", () => ({
+  getGraphClient: jest.fn().mockResolvedValue({
+    query: jest.fn()
+  })
+}));
+describe("toGetDomain function", () => {
   test("getting channel id", async () => {
     const variables = {};
     const data = { leave_config: [{ domain: "kiit.ac.in" }] };
-    clients.query.mockResolvedValue({ data: data });
+    const gClient = await getGraphClient();
+
+    gClient.query.mockResolvedValue({ data: data });
 
     await toGetDomain(variables);
-    expect(clients.query).toHaveBeenCalledWith({
+    expect(gClient.query).toHaveBeenCalledWith({
       query: gql`${TO_GET_DOMAIN}`,
       variables,
     });
@@ -23,7 +31,9 @@ describe("toGetChannel function", () => {
       const variables = {};
 
       const error = new Error("Failed to fetch data from the server.");
-      clients.query.mockRejectedValue(error);
+      const gClient = await getGraphClient();
+
+      gClient.query.mockRejectedValue(error);
 
       console.log = jest.fn();
       try {

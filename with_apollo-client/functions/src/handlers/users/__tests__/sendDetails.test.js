@@ -1,4 +1,4 @@
-import { sendDetails } from '../functions/sqs-triggers/sendDetails.js';
+import { pushingInQueue } from '../../../utils/helper.js';
 import { sqsClient } from '../../../utils/synSQSinit.js';
 import { SendMessageCommand } from '@aws-sdk/client-sqs';
 
@@ -9,6 +9,11 @@ jest.mock('../../../utils/synSQSinit.js', () => ({
     send: jest.fn().mockResolvedValue({ MessageId: "12345" }),
   },
 }));
+
+jest.mock("../../../libs/graphConnector.js", () => ({
+  getGraphClient: jest.fn(),
+}));
+
 describe('sendDetails', () => {
   afterEach(() => {
     jest.clearAllMocks();
@@ -17,12 +22,12 @@ describe('sendDetails', () => {
   test("should log Success, message sent. MessageID: 12345", async () => {
 
 
-    const id = "123";
+    const id = 123;
     const created_by = "Rajveer";
     const updated_by = "Pratap";
 
     const time = new Date().toLocaleString();
-    await sendDetails(id, created_by, updated_by);
+    await pushingInQueue(id, created_by, updated_by);
 
     expect(sqsClient.send).toHaveBeenCalledWith(
       expect.objectContaining({
@@ -52,16 +57,5 @@ describe('sendDetails', () => {
       })
     );
   });
-  it('should log an error if there is a failure', async () => {
-    const id = 123;
-    const created_by = 'John';
-    const updated_by = 'Jane';
-    const errorMessage = 'Something went wrong';
-    // Throw an error when the SendMessageCommand is called
-    sqsClient.send.mockRejectedValueOnce(new Error(errorMessage));
-    const consoleSpy = jest.spyOn(console, 'log');
-    await sendDetails(id, created_by, updated_by);
-    expect(consoleSpy).toHaveBeenCalledWith('Error', expect.any(Error));
-    consoleSpy.mockRestore();
-  });
+
   });

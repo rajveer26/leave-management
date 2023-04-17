@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<coverage generated="1681712646295" clover="3.2.0">
+  <project timestamp="1681712646295" name="All files">
+    <metrics statements="119" coveredstatements="119" conditionals="16" coveredconditionals="16" methods="26" coveredmethods="26" elements="161" coveredelements="161" complexity="0" loc="119" ncloc="119" packages="6" files="8" classes="8"/>
+    <package name="handlers.users.addUsersThroughChannel.addNewUserThroughChannel">
+      <metrics statements="16" coveredstatements="16" conditionals="6" coveredconditionals="6" methods="1" coveredmethods="1"/>
+      <file name="addUserChannelFunction.js" path="/home/rajveersingh/WebstormProjects/leave-tracker/functions/src/handlers/users/addUsersThroughChannel/addNewUserThroughChannel/addUserChannelFunction.js">
+        <metrics statements="16" coveredstatements="16" conditionals="6" coveredconditionals="6" methods="1" coveredmethods="1"/>
+        <line num="10" count="1" type="stmt"/>
+        <line num="12" count="4" type="stmt"/>
+        <line num="15" count="4" type="stmt"/>
+        <line num="16" count="4" type="cond" truecount="2" falsecount="0"/>
+        <line num="17" count="3" type="stmt"/>
+        <line num="20" count="3" type="stmt"/>
+        <line num="21" count="3" type="stmt"/>
+        <line num="24" count="3" type="stmt"/>
+        <line num="25" count="3" type="cond" truecount="2" falsecount="0"/>
+        <line num="27" count="2" type="stmt"/>
+        <line num="28" count="2" type="cond" truecount="2" falsecount="0"/>
+        <line num="29" count="1" type="stmt"/>
+        <line num="30" count="1" type="stmt"/>
+        <line num="31" count="1" type="stmt"/>
+        <line num="33" count="1" type="stmt"/>
+        <line num="44" count="1" type="stmt"/>
+      </file>
+    </package>
+    <package name="handlers.users.addUsersThroughChannel.usersInChannels">
+      <metrics statements="14" coveredstatements="14" conditionals="0" coveredconditionals="0" methods="5" coveredmethods="5"/>
+      <file name="main1.js" path="/home/rajveersingh/WebstormProjects/leave-tracker/functions/src/handlers/users/addUsersThroughChannel/usersInChannels/main1.js">
+        <metrics statements="14" coveredstatements="14" conditionals="0" coveredconditionals="0" methods="5" coveredmethods="5"/>
+        <line num="7" count="1" type="stmt"/>
+        <line num="9" count="1" type="stmt"/>
+        <line num="11" count="2" type="stmt"/>
+        <line num="12" count="2" type="stmt"/>
+        <line num="13" count="2" type="stmt"/>
+        <line num="14" count="2" type="stmt"/>
+        <line num="15" count="2" type="stmt"/>
+        <line num="17" count="2" type="stmt"/>
+        <line num="18" count="2" type="stmt"/>
+        <line num="21" count="2" type="stmt"/>
+        <line num="23" count="2" type="stmt"/>
+        <line num="25" count="2" type="stmt"/>
+        <line num="27" count="2" type="stmt"/>
+        <line num="28" count="2" type="stmt"/>
+      </file>
+    </package>
+    <package name="handlers.users.addingAllUsers">
+      <metrics statements="26" coveredstatements="26" conditionals="6" coveredconditionals="6" methods="6" coveredmethods="6"/>
+      <file name="main3.js" path="/home/rajveersingh/WebstormProjects/leave-tracker/functions/src/handlers/users/addingAllUsers/main3.js">
+        <metrics statements="26" coveredstatements="26" conditionals="6" coveredconditionals="6" methods="6" coveredmethods="6"/>
+        <line num="9" count="1" type="stmt"/>
+        <line num="12" count="4" type="stmt"/>
+        <line num="15" count="4" type="stmt"/>
+        <line num="18" count="4" type="stmt"/>
+        <line num="19" count="4" type="stmt"/>
+        <line num="20" count="4" type="stmt"/>
+        <line num="21" count="6" type="stmt"/>
+        <line num="22" count="6" type="stmt"/>
+        <line num="24" count="6" type="stmt"/>
+        <line num="26" count="6" type="cond" truecount="2" falsecount="0"/>
+        <line num="27" count="5" type="stmt"/>
+        <line num="29" count="5" type="cond" truecount="2" falsecount="0"/>
+        <line num="30" count="4" type="stmt"/>
+        <line num="31" count="4" type="stmt"/>
+        <line num="35" count="4" type="stmt"/>
+        <line num="36" count="4" type="cond" truecount="2" falsecount="0"/>
+        <line num="37" count="2" type="stmt"/>
+        <line num="38" count="2" type="stmt"/>
+        <line num="40" count="2" type="stmt"/>
+        <line num="43" count="2" type="stmt"/>
+        <line num="54" count="2" type="stmt"/>
+        <line num="56" count="2" type="stmt"/>
+        <line num="61" count="6" type="stmt"/>
+        <line num="64" count="4" type="stmt"/>
+        <line num="66" count="6" type="stmt"/>
+        <line num="67" count="6" type="stmt"/>
+      </file>
+    </package>
+    <package name="handlers.users.removedUserChannel">
+      <metrics statements="9" coveredstatements="9" conditionals="2" coveredconditionals="2" methods="2" coveredmethods="2"/>
+      <file name="removeMain.js" path="/home/rajveersingh/WebstormProjects/leave-tracker/functions/src/handlers/users/removedUserChannel/removeMain.js">
+        <metrics statements="9" coveredstatements="9" conditionals="2" coveredconditionals="2" methods="2" coveredmethods="2"/>
+        <line num="7" count="1" type="stmt"/>
+        <line num="9" count="1" type="stmt"/>
+        <line num="16" count="1" type="stmt"/>
+        <line num="20" count="2" type="stmt"/>
+        <line num="21" count="2" type="stmt"/>
+        <line num="24" count="2" type="stmt"/>
+        <line num="25" count="2" type="cond" truecount="2" falsecount="0"/>
+        <line num="26" count="1" type="stmt"/>
+        <line num="29" count="1" type="stmt"/>
+      </file>
+    </package>
+    <package name="queries">
+      <metrics statements="6" coveredstatements="6" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      <file name="config.js" path="/home/rajveersingh/WebstormProjects/leave-tracker/functions/src/queries/config.js">
+        <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="1" count="15" type="stmt"/>
+        <line num="9" count="15" type="stmt"/>
+        <line num="17" count="15" type="stmt"/>
+      </file>
+      <file name="users.js" path="/home/rajveersingh/WebstormProjects/leave-tracker/functions/src/queries/users.js">
+        <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="1" count="16" type="stmt"/>
+        <line num="13" count="16" type="stmt"/>
+        <line num="25" count="16" type="stmt"/>
+      </file>
+    </package>
+    <package name="utils">
+      <metrics statements="48" coveredstatements="48" conditionals="2" coveredconditionals="2" methods="12" coveredmethods="12"/>
+      <file name="helper.js" path="/home/rajveersingh/WebstormProjects/leave-tracker/functions/src/utils/helper.js">
+        <metrics statements="47" coveredstatements="47" conditionals="2" coveredconditionals="2" methods="12" coveredmethods="12"/>
+        <line num="16" count="15" type="stmt"/>
+        <line num="19" count="15" type="stmt"/>
+        <line num="21" count="15" type="stmt"/>
+        <line num="22" count="5" type="stmt"/>
+        <line num="29" count="5" type="stmt"/>
+        <line num="56" count="5" type="stmt"/>
+        <line num="57" count="5" type="stmt"/>
+        <line num="58" count="4" type="stmt"/>
+        <line num="60" count="1" type="stmt"/>
+        <line num="65" count="6" type="stmt"/>
+        <line num="66" count="6" type="stmt"/>
+        <line num="67" count="6" type="stmt"/>
+        <line num="73" count="4" type="stmt"/>
+        <line num="74" count="4" type="stmt"/>
+        <line num="80" count="2" type="stmt"/>
+        <line num="81" count="2" type="stmt"/>
+        <line num="82" count="2" type="stmt"/>
+        <line num="83" count="2" type="stmt"/>
+        <line num="84" count="2" type="stmt"/>
+        <line num="85" count="2" type="stmt"/>
+        <line num="86" count="2" type="stmt"/>
+        <line num="90" count="4" type="stmt"/>
+        <line num="97" count="6" type="stmt"/>
+        <line num="98" count="6" type="stmt"/>
+        <line num="104" count="2" type="stmt"/>
+        <line num="108" count="2" type="stmt"/>
+        <line num="109" count="2" type="stmt"/>
+        <line num="117" count="2" type="stmt"/>
+        <line num="121" count="4" type="cond" truecount="2" falsecount="0"/>
+        <line num="122" count="2" type="stmt"/>
+        <line num="124" count="2" type="stmt"/>
+        <line num="128" count="8" type="stmt"/>
+        <line num="130" count="8" type="stmt"/>
+        <line num="136" count="6" type="stmt"/>
+        <line num="137" count="6" type="stmt"/>
+        <line num="141" count="4" type="stmt"/>
+        <line num="142" count="4" type="stmt"/>
+        <line num="144" count="4" type="stmt"/>
+        <line num="145" count="4" type="stmt"/>
+        <line num="146" count="4" type="stmt"/>
+        <line num="147" count="4" type="stmt"/>
+        <line num="148" count="4" type="stmt"/>
+        <line num="152" count="4" type="stmt"/>
+        <line num="158" count="4" type="stmt"/>
+        <line num="160" count="4" type="stmt"/>
+        <line num="166" count="2" type="stmt"/>
+        <line num="170" count="4" type="stmt"/>
+      </file>
+      <file name="synSQSinit.js" path="/home/rajveersingh/WebstormProjects/leave-tracker/functions/src/utils/synSQSinit.js">
+        <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="3" count="12" type="stmt"/>
+      </file>
+    </package>
+  </project>
+</coverage>

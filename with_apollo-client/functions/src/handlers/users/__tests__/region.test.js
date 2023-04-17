@@ -1,4 +1,8 @@
-import { setRegion } from '../functions/region.js';
+import { setRegion } from '../../../utils/helper.js';
+
+jest.mock("../../../libs/graphConnector.js", () => ({
+  getGraphClient: jest.fn(),
+}));
 
 describe('setRegion', () => {
   it('should return "India" when region is "Asia/Kolkata"', async () => {

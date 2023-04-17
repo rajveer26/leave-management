@@ -1,6 +1,13 @@
 import {
   validMail
-} from "../functions/toCheckMail.js";
+} from "../../../utils/helper.js";
+
+
+jest.mock("../../../libs/graphConnector.js", () => {
+  return {
+    getGraphClient: jest.fn()
+  }
+});
 
 describe("Get true validation upon sending mail", () => {
   test("getSubscribersFromString should return an array of users", async () => {

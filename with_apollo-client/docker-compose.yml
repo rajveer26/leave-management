@@ -17,7 +17,7 @@ services:
     depends_on:
       - "postgres"
     restart: always
-    env_file: .env
+    env_file: functions/.env
     environment:
       HASURA_GRAPHQL_METADATA_DATABASE_URL: postgres://postgres:postgres@postgres:5432/hasura
       HASURA_GRAPHQL_DATABASE_URL: postgres://postgres:postgres@postgres:5432/leave

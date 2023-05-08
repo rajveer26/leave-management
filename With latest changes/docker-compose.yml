@@ -1,0 +1,38 @@
+version: "3.6"
+services:
+  postgres:
+    image: postgres:13
+    restart: always
+    ports:
+      - "15432:5432"
+    volumes:
+      - ./graph/migrations/db-init.sql:/docker-entrypoint-initdb.d/0-db-init.sql
+      - db_data:/var/lib/postgresql/data
+    environment:
+      POSTGRES_PASSWORD: postgres
+  graphql-engine:
+    image: hasura/graphql-engine:v2.16.1
+    ports:
+      - "8081:8080"
+    depends_on:
+      - "postgres"
+    restart: always
+    env_file: functions/.env
+    environment:
+      HASURA_GRAPHQL_METADATA_DATABASE_URL: postgres://postgres:postgres@postgres:5432/hasura
+      HASURA_GRAPHQL_DATABASE_URL: postgres://postgres:postgres@postgres:5432/leave
+      HASURA_GRAPHQL_ENABLE_CONSOLE: "true" # set to "false" to disable console
+      AUTH_ACTION_BASE_URL: http://functions:3000
+      HASURA_GRAPHQL_ADMIN_SECRET: myadminsecretkey
+  functions:
+    build:
+      dockerfile: Dockerfile
+      context: "."
+    env_file: functions/.env
+    ports:
+      - "8091:3000"
+    volumes:
+      - ./functions/src:/app/src:rw
+      - ./functions/.env:/app/.env:ro
+volumes:
+  db_data:

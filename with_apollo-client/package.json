@@ -56,5 +56,5 @@
     "eslint-plugin-promise": "^6.0.0",
     "prettier": "^2.8.4"
   },
-  "repository": "git@github.com:talview/leave-tracker.git"
+  "repository": "git@github.com:rajveer26/leave-management.git"
 }
